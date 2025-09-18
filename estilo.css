@@ -1,0 +1,86 @@
+/* Body con gradiente */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* H1 */
+h1 {
+    background-color: #66bb6a;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: overline;
+}
+
+/* Carousel */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Cards especiales */
+.card-special {
+    background-color: #ffffff;
+    border: 1px solid #4db6ac;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card-special:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+/* Formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form .form-control:focus {
+    border-color: #4db6ac;
+    box-shadow: 0 0 5px rgba(77,182,172,0.5);
+}
+
+form button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Mensaje de éxito */
+#formMessage {
+    font-size: 1.2rem;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+
+
