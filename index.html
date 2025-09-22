@@ -6,174 +6,206 @@
     <title>Centro Primario de Salud San Martín</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo.css">
+
+    <!-- FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
+
 </head>
 <body>
-    <script>
-        window.onload = function() {
-            var age = prompt("¿Eres mayor de 18 años? (sí/no)");
 
-            if (age === null || age.toLowerCase() !== 'si') {
-                alert("Lo siento, debes ser mayor de 18 años para ingresar.");
-                window.location.href = "https://www.google.com"; 
-            } else {
-                alert("¡Bienvenidos a mi página web!");
-            }
-        };
-    </script>
-
-    <div class="container">
-        <h1>Centro Primario de Salud San Martín</h1>
-        <h2 class="text-center mb-4">Cuidamos de tu salud y la de tu familia cerca de ti.</h2>
-
-        <!-- Nav Pills -->
-        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <button class="nav-link active" id="pills-horarios-tab" data-toggle="pill" data-target="#pills-horarios" type="button">Horarios</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="pills-especialidades-tab" data-toggle="pill" data-target="#pills-especialidades" type="button">Especialidades</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="pills-turnos-tab" data-toggle="pill" data-target="#pills-turnos" type="button">Turnos</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="pills-fechas-tab" data-toggle="pill" data-target="#pills-fechas" type="button">Fechas</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="pills-fechas-tab" data-toggle="pill" data-target="#pills-fechas" type="button">Contacto</button>
-            </li>
-        </ul>
-
-        <div class="tab-content mb-5" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-horarios">
-                <p>De lunes a viernes: 8:00 - 19:00</p>
-            </div>
-            <div class="tab-pane fade" id="pills-especialidades">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-center h-100 card-special">
-                            <div class="card-body">
-                                <h5 class="card-title">Pediatría</h5>
-                                <p class="card-text">Atención a niños y adolescentes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-center h-100 card-special">
-                            <div class="card-body">
-                                <h5 class="card-title">Medicina General</h5>
-                                <p class="card-text">Atención médica integral para todas las edades.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-center h-100 card-special">
-                            <div class="card-body">
-                                <h5 class="card-title">Kinesiología</h5>
-                                <p class="card-text">Tratamientos de rehabilitación y bienestar físico.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-center h-100 card-special">
-                            <div class="card-body">
-                                <h5 class="card-title">Odontología</h5>
-                                <p class="card-text">Cuidado de la salud bucal.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-center h-100 card-special">
-                            <div class="card-body">
-                                <h5 class="card-title">Psicología</h5>
-                                <p class="card-text">Atención psicológica y bienestar mental.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-turnos">
-                <p>Para solicitar turnos, por favor llame al 3804-203702.</p>
-            </div>
-            <div class="tab-pane fade" id="pills-fechas">
-                <ul>
-                    <li>Campaña de Vacunación: 1 - 15 de diciembre</li>
-                </ul>
-            </div>
-            <div class="tab-pane fade" id="pills-Contacto">
-                <ul>
-                    <li>mail:centroprimario@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Carousel -->
-        <div id="carouselExample" class="carousel slide mb-5" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="KINESIOLOGIA.jpg" class="d-block w-100" alt="Kinesiología">
-                </div>
-                <div class="carousel-item">
-                    <img src="PEDIATRIA.jpg" class="d-block w-100" alt="Pediatría">
-                </div>
-                <div class="carousel-item">
-                    <img src="ODONTOLOGIA.jpg" class="d-block w-100" alt="Odontología">
-                </div>
-                <div class="carousel-item">
-                    <img src="PSICOLOGIA.jpg" class="d-block w-100" alt="Psicología">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-    </div>
-    <!-- Formulario de Consulta -->
-<div class="container mb-5" data-aos="fade-up">
-    <h2 class="text-center mb-4">Formulario de Consulta</h2>
-    <form id="consultaForm">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputName">Nombre completo</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Tu nombre" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputEmail">Correo electrónico</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Tu email" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPhone">Teléfono</label>
-            <input type="tel" class="form-control" id="inputPhone" placeholder="Tu teléfono">
-        </div>
-        <div class="form-group">
-            <label for="inputMessage">Consulta</label>
-            <textarea class="form-control" id="inputMessage" rows="4" placeholder="Escribe tu consulta" required></textarea>
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-success btn-lg">Enviar consulta</button>
-        </div>
-    </form>
-    <div id="formMessage" class="text-center mt-3" style="display:none;"></div>
+<div class="container mt-3 position-relative">
+    <h1 class="text-center mb-0">Centro Primario de Salud San Martín</h1>
+    <h2 class="text-center mb-4">Cuidamos de tu salud y la de tu familia cerca de ti.</h2>
+    <img src="centrosm.jpg" alt="Logo" class="logo-flotante">
 </div>
 
+<!-- Botones login/logout -->
+<div class="text-center mb-3">
+    <button id="loginBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+        Iniciar Sesión
+    </button>
+    <button id="logoutBtn" class="btn btn-danger" style="display:none;">
+        Cerrar Sesión
+    </button>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <h5>Síguenos en nuestras redes sociales &copy; 2025 Centro de Atención Primaria</h5>
-        <div class="d-flex justify-content-center mt-2">
-            <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+<!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Iniciar Sesión</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form id="loginForm">
+                  <div class="form-group">
+                      <label for="username">Usuario</label>
+                      <input type="text" class="form-control" id="username" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Contraseña</label>
+                      <input type="password" class="form-control" id="password" required>
+                  </div>
+                  <button type="submit" class="btn btn-success btn-block">Ingresar</button>
+              </form>
+              <div id="loginMessage" class="text-center mt-3" style="display:none;"></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Nav Pills -->
+<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <button class="nav-link active" id="pills-horarios-tab" data-toggle="pill" data-target="#pills-horarios" type="button">Horarios</button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" id="pills-especialidades-tab" data-toggle="pill" data-target="#pills-especialidades" type="button">Especialidades</button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" id="pills-turnos-tab" data-toggle="pill" data-target="#turnosContent" type="button">Turnos</button>
+    </li>
+     <li class="nav-item">
+        <button class="nav-link" data-toggle="pill" data-target="#pills-fechas">Fechas</button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" id="pills-contacto-tab" data-toggle="pill" data-target="#pills-contacto" type="button">Contacto</button>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-outline-primary" href="profesionales.html">Profesionales</a>
+    </li>
+</ul>
+
+
+<!-- Tab Content -->
+<div class="tab-content mb-5" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-horarios">
+        <p>De lunes a viernes: 8:00 AM - 19:00 PM</p>
+    </div>
+
+    <div class="tab-pane fade" id="pills-especialidades">
+        <div class="row">
+
+            <!-- Todas las cards de especialidades -->
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Pediatría</h5><p class="card-text">Atención a niños y adolescentes.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Medicina General</h5><p class="card-text">Atención médica integral para todas las edades.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Kinesiología</h5><p class="card-text">Tratamientos de rehabilitación y bienestar físico.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Odontología</h5><p class="card-text">Cuidado de la salud bucal.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Psicología</h5><p class="card-text">Atención psicológica y bienestar mental.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Terapia Ocupacional</h5><p class="card-text">Rehabilitación y Recalificacion laboral.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Nutrición</h5><p class="card-text">Planes de alimentación saludable.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Obstetricia</h5><p class="card-text">Seguimiento de embarazos.</p></div></div></div>
+                <div class="col-md-4 mb-3"><div class="card text-center h-100 card-special"><div class="card-body"><h5 class="card-title">Trabajo Social</h5><p class="card-text">Cuidado de la salud del corazón.</p></div></div></div>
+            </div>
         </div>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+        
+    <div class="tab-pane fade" id="turnosContent">
+    <p>Para solicitar turnos, por favor llame al 3804-203702.</p>
+</div>
+
+   <div class="tab-pane fade" id="pills-fechas">
+        <h4 class="text-center mt-3">Calendario de Actividades</h4>
+        <div id="calendar"></div>
+    </div>
+
+ <div class="tab-pane fade" id="pills-contacto">
+        <p>Email: centroprimariosanmartin@gmail.com</p>
+    </div>
+</div>
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide mb-5" data-ride="carousel">
+    <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+            <img src="KINESIOLOGIA.jpg" class="d-block mx-auto" alt="Kinesiología">
+        </div>
+        <div class="carousel-item">
+            <img src="PEDIATRIA.jpg" class="d-block mx-auto" alt="Pediatría">
+        </div>
+        <div class="carousel-item">
+            <img src="ODONTOLOGIA.jpg" class="d-block mx-auto" alt="Odontología">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<!-- Mapa y formulario lado a lado -->
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-6 mb-4 position-relative">
+            <h2 class="mb-4">Ubicación</h2>
+            <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13230.123456789!2d-66.85735860306892!3d-29.400664762140806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDI0JzAwLjYiUyA2NsKwNTEnMzQuNiJX!5e0!3m2!1ses!2sar!4v1694981234567!5m2!1ses!2sar"
+                  width="100%" height="450" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <div class="map-label position-absolute text-center">
+                    <span>Nuestra Ubicación</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h2 class="mb-4">Formulario de Consulta</h2>
+            <form id="consultaForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Nombre completo</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Correo electrónico</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Tu email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPhone">Teléfono</label>
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="Tu teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Consulta</label>
+                    <textarea class="form-control" id="inputMessage" rows="4" placeholder="Escribe tu consulta" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success btn-lg">Enviar consulta</button>
+                </div>
+            </form>
+            <div id="formMessage" class="text-center mt-3" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <h5>Síguenos en nuestras redes sociales &copy; 2025 Centro de Atención Primaria</h5>
+    <div class="d-flex justify-content-center mt-2">
+        <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="twiter.png" alt="twiter"></a>
+    </div>
+</footer>
+
+<!-- jQuery, Popper y Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
+
+<!-- Script propio -->
+<script src="app.js"></script>
 </body>
 </html>

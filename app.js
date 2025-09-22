@@ -1,48 +1,78 @@
-// JavaScript para funcionalidades adicionales
-$(document).ready(function() {
-    console.log("El documento está listo.");
+$(document).ready(function () {
 
-    // Inicializar carousel automáticamente
-    $('#carouselExample').carousel({
-        interval: 3000,
-        pause: 'hover'
-    });
-});
-$(document).ready(function() {
-    console.log("El documento está listo.");
-
-    // Inicializar carousel automáticamente
-    $('#carouselExample').carousel({
-        interval: 3000,
-        pause: 'hover'
-    });
-
-    // Inicializar AOS
-    AOS.init({
-        duration: 1000, // duración de la animación en ms
-        once: true // animación solo la primera vez que aparece
-    });
-
-    // Formulario de consulta funcional
-    $('#consultaForm').on('submit', function(event) {
-        event.preventDefault(); // evita que se recargue la página
-
-        // Capturar valores (opcional, para mostrar en consola)
-        const nombre = $('#inputName').val();
-        const email = $('#inputEmail').val();
-        const telefono = $('#inputPhone').val();
-        const mensaje = $('#inputMessage').val();
-        console.log(`Consulta enviada:\nNombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nMensaje: ${mensaje}`);
-
-        // Mostrar mensaje de éxito
+    // --- FORMULARIO DE CONSULTA ---
+    $('#consultaForm').on('submit', function (event) {
+        event.preventDefault();
         $('#formMessage').text('¡Gracias! Tu consulta ha sido enviada con éxito.').fadeIn();
-
-        // Limpiar formulario
         $('#consultaForm')[0].reset();
-
-        // Ocultar mensaje después de 5 segundos
-        setTimeout(() => {
-            $('#formMessage').fadeOut();
-        }, 5000);
+        setTimeout(() => { $('#formMessage').fadeOut(); }, 5000);
     });
+
+    // --- LOGIN / LOGOUT ---
+    const loginForm = $("#loginForm");
+    const loginBtn = $("#loginBtn");
+    const logoutBtn = $("#logoutBtn");
+    const loginMessage = $("#loginMessage");
+
+    loginForm.on("submit", function (e) {
+        e.preventDefault();
+        const username = $("#username").val().trim();
+        const password = $("#password").val().trim();
+
+        if (username === "admin" && password === "1234") {
+            loginMessage.show().css("color", "green").text("Inicio de sesión exitoso ✅");
+            loginBtn.hide();
+            logoutBtn.show();
+            setTimeout(() => {
+                $('#loginModal').modal('hide');
+                loginMessage.hide();
+                loginForm[0].reset();
+            }, 1000);
+        } else {
+            loginMessage.show().css("color", "red").text("Usuario o contraseña incorrectos ❌");
+        }
+    });
+
+    logoutBtn.on("click", function () {
+        loginBtn.show();
+        logoutBtn.hide();
+        alert("Sesión cerrada correctamente.");
+    });
+
+    // --- CALENDARIO (FullCalendar) ---
+    let calendarInitialized = false;
+
+    function initCalendar() {
+        const calendarEl = document.getElementById('calendar');
+        if (calendarEl && !calendarInitialized) {
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'es',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+    { title: 'Campaña de Vacunación', start: '2025-12-01', end: '2025-12-15' },
+    { title: 'Charlas de Nutrición', start: '2025-11-10' },
+    { title: 'Fecha de Vacunación', start: '2025-09-30' } // <- nuevo evento
+]
+
+            });
+            calendar.render();
+            calendarInitialized = true;
+        }
+    }
+
+    $('button[data-target="#pills-fechas"]').on('shown.bs.tab', function () {
+        initCalendar();
+    });
+
+    if ($('#pills-fechas').hasClass('active show')) {
+        initCalendar();
+    }
+
 });
+
+
