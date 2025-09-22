@@ -1,0 +1,174 @@
+/* Logo flotante */
+.logo-flotante {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: auto;
+}
+/* Botón de cerrar sesión mejorado */
+#logoutBtn {
+    display: none; /* se muestra solo con JS */
+    margin-left: 10px;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto hover */
+#logoutBtn:hover {
+    background-color: #c62828; /* rojo más intenso */
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Ubicación en la parte superior junto al login */
+.text-center.mb-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+/* Párrafos */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+/* Especialidades flex */
+#pills-especialidades .col-md-4 {
+    display: flex;
+}
+
+/* Cards de especialidades */
+#pills-especialidades .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#pills-especialidades .card:hover {
+    transform: translateY(-5px);
+}
+
+#pills-especialidades .card-title {
+    font-weight: bold;
+    color: #00695c;
+}
+
+/* Body y fondo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* H1 */
+h1 {
+    background-color: #66bb6a;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: overline;
+}
+
+/* Carousel */
+.carousel-item img {
+    max-width: 500px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Cards especiales */
+.card-special {
+    background-color: #ffffff;
+    border: 1px solid #4db6ac;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card-special:hover {
+    transform: translateY(-5px);
+}
+
+/* Mapa */
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.map-label {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(77,182,172,0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    position: absolute;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+
+  .profile-img {
+    width: 100px;         /* tamaño fijo */
+    height: 100px;
+    object-fit: cover;    /* recorta sin deformar */
+    border-radius: 50%;   /* círculo */
+    border: 3px solid #4db6ac; /* opcional: borde en color */
+    margin-top: 15px;     /* separación desde arriba */
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 20px auto;
+    height: 600px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+
+
+
+
