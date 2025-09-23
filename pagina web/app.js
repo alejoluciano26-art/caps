@@ -1,9 +1,29 @@
 $(document).ready(function () {
+    // --- MODAL DE EDAD ---
+    $('#edadModal').modal('show');
+
+    $('#btnEdad').on('click', function () {
+        let edad = parseInt($('#inputEdad').val(), 10);
+
+        if (!isNaN(edad) && edad > 0) {
+            if (edad >= 18) {
+                alert("Eres mayor de edad ✅");
+                $('#edadModal').modal('hide'); // Cierra el modal
+            } else {
+                alert("Eres menor de edad ❌");
+                window.location.href = "https://www.google.com"; // Redirige
+            }
+        } else {
+            $('#edadError').show();
+        }
+    });
 
     // --- FORMULARIO DE CONSULTA ---
     $('#consultaForm').on('submit', function (event) {
         event.preventDefault();
-        $('#formMessage').text('¡Gracias! Tu consulta ha sido enviada con éxito.').fadeIn();
+        $('#formMessage')
+            .text('¡Gracias! Tu consulta ha sido enviada con éxito.')
+            .fadeIn();
         $('#consultaForm')[0].reset();
         setTimeout(() => { $('#formMessage').fadeOut(); }, 5000);
     });
@@ -54,11 +74,10 @@ $(document).ready(function () {
                     right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
                 events: [
-    { title: 'Campaña de Vacunación', start: '2025-12-01', end: '2025-12-15' },
-    { title: 'Charlas de Nutrición', start: '2025-11-10' },
-    { title: 'Fecha de Vacunación', start: '2025-09-30' } // <- nuevo evento
-]
-
+                    { title: 'Campaña de Vacunación', start: '2025-12-01', end: '2025-12-15' },
+                    { title: 'Charlas de Nutrición', start: '2025-11-10' },
+                    { title: 'Fecha de Vacunación', start: '2025-09-30' }
+                ]
             });
             calendar.render();
             calendarInitialized = true;
@@ -72,7 +91,9 @@ $(document).ready(function () {
     if ($('#pills-fechas').hasClass('active show')) {
         initCalendar();
     }
-
 });
+
+
+
 
 
