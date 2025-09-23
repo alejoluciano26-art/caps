@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    alert("Bienvenido");
+
+    var edad = prompt("¿Cuál es tu edad?");
+    if (edad >= 18) {
+        alert("Eres mayor de edad ✅");
+    } else {
+        alert("Eres menor de edad ❌");
+        // Si quieres bloquear el acceso:
+        window.location.href = "https://www.google.com"; 
+        return; // corta la ejecución del resto del script
+    }
 
     // --- FORMULARIO DE CONSULTA ---
     $('#consultaForm').on('submit', function (event) {
@@ -54,11 +65,10 @@ $(document).ready(function () {
                     right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
                 events: [
-    { title: 'Campaña de Vacunación', start: '2025-12-01', end: '2025-12-15' },
-    { title: 'Charlas de Nutrición', start: '2025-11-10' },
-    { title: 'Fecha de Vacunación', start: '2025-09-30' } // <- nuevo evento
-]
-
+                    { title: 'Campaña de Vacunación', start: '2025-12-01', end: '2025-12-15' },
+                    { title: 'Charlas de Nutrición', start: '2025-11-10' },
+                    { title: 'Fecha de Vacunación', start: '2025-09-30' }
+                ]
             });
             calendar.render();
             calendarInitialized = true;
@@ -74,5 +84,6 @@ $(document).ready(function () {
     }
 
 });
+
 
 
