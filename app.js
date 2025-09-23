@@ -1,20 +1,29 @@
 $(document).ready(function () {
-    alert("Bienvenido");
+    // --- MODAL DE EDAD ---
+    $('#edadModal').modal('show');
 
-    var edad = prompt("¿Cuál es tu edad?");
-    if (edad >= 18) {
-        alert("Eres mayor de edad ✅");
-    } else {
-        alert("Eres menor de edad ❌");
-        // Si quieres bloquear el acceso:
-        window.location.href = "https://www.google.com"; 
-        return; // corta la ejecución del resto del script
-    }
+    $('#btnEdad').on('click', function () {
+        let edad = parseInt($('#inputEdad').val(), 10);
+
+        if (!isNaN(edad) && edad > 0) {
+            if (edad >= 18) {
+                alert("Eres mayor de edad ✅");
+                $('#edadModal').modal('hide'); // Cierra el modal
+            } else {
+                alert("Eres menor de edad ❌");
+                window.location.href = "https://www.google.com"; // Redirige
+            }
+        } else {
+            $('#edadError').show();
+        }
+    });
 
     // --- FORMULARIO DE CONSULTA ---
     $('#consultaForm').on('submit', function (event) {
         event.preventDefault();
-        $('#formMessage').text('¡Gracias! Tu consulta ha sido enviada con éxito.').fadeIn();
+        $('#formMessage')
+            .text('¡Gracias! Tu consulta ha sido enviada con éxito.')
+            .fadeIn();
         $('#consultaForm')[0].reset();
         setTimeout(() => { $('#formMessage').fadeOut(); }, 5000);
     });
@@ -82,8 +91,9 @@ $(document).ready(function () {
     if ($('#pills-fechas').hasClass('active show')) {
         initCalendar();
     }
-
 });
+
+
 
 
 

@@ -15,6 +15,26 @@
 </head>
 <body>
 
+    <!-- Modal Edad -->
+<div class="modal fade" id="edadModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title">Verificación de Edad</h5>
+      </div>
+      <div class="modal-body">
+        <p>Por favor, ingresa tu edad para continuar:</p>
+        <input type="number" id="inputEdad" class="form-control" min="1" placeholder="Tu edad">
+        <div id="edadError" class="text-danger mt-2" style="display:none;">Ingresa una edad válida</div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button id="btnEdad" class="btn btn-success">Ingresar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="container mt-3 position-relative">
     <h1 class="text-center mb-0">Centro Primario de Salud San Martín</h1>
     <h2 class="text-center mb-4">Cuidamos de tu salud y la de tu familia cerca de ti.</h2>
@@ -31,7 +51,7 @@
     </button>
 </div>
 
-<!-- Modal Login -->
+<!-- Modo del Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -82,7 +102,7 @@
 </ul>
 
 
-<!-- Tab Content -->
+<!-- contenido de los botones -->
 <div class="tab-content mb-5" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-horarios">
         <p>De lunes a viernes: 8:00 AM - 19:00 PM</p>
