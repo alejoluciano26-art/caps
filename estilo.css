@@ -87,7 +87,13 @@ h1 {
     text-decoration: overline;
     font-family: 'Poppins', sans-serif; /* fuente moderna */
 }
-
+h2 {
+    background-color: #497247f1;
+    color: rgb(242, 243, 245);
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif; /* fuente moderna */
+}
 
 /* Carousel */
 .carousel-item img {
