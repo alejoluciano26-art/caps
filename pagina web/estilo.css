@@ -85,6 +85,14 @@ h1 {
     border-radius: 8px;
     text-align: center;
     text-decoration: overline;
+    font-family: 'Poppins', sans-serif; /* fuente moderna */
+}
+h2 {
+    background-color: #6bb168f1;
+    color: rgb(242, 243, 245);
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif; /* fuente moderna */
 }
 
 /* Carousel */
